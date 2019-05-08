@@ -4,12 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>reveal.js</title>
-
     <link rel="stylesheet" href="revealjs/css/reset.css">
     <link rel="stylesheet" href="revealjs/css/reveal.css">
-    <link rel="stylesheet" href="revealjs/css/theme/black.css">
-
+    <link rel="stylesheet" href="revealjs/css/theme/white.css">
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="revealjs/lib/css/monokai.css">
 
@@ -18,10 +15,13 @@
       var link = document.createElement( 'link' );
       link.rel = 'stylesheet';
       link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ?  'revealjs/css/print/pdf.css' : 'revealjs/css/print/paper.css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'revealjs/css/print/pdf.css' : 'revealjs/css/print/paper.css';
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
+
+    <title>Калина, Купина, та інша флора вітчизняної криптографії</title>
   </head>
+
   <body>
     <div class="reveal">
       <div class="slides">
@@ -38,12 +38,31 @@
       // - https://github.com/hakimel/reveal.js#dependencies
       Reveal.initialize({
         dependencies: [
+          // Markdown support
           { src: 'revealjs/plugin/markdown/marked.js' },
           { src: 'revealjs/plugin/markdown/markdown.js' },
+          // Code highlight
+          { src: 'revealjs/plugin/highlight/highlight.js', async: true },
+          // Speaker notes
           { src: 'revealjs/plugin/notes/notes.js', async: true },
-          { src: 'revealjs/plugin/highlight/highlight.js', async: true }
-        ]
+          // MathJax
+          { src: 'revealjs/plugin/math/math.js', async: true },
+        ],
+        navigationMode: 'linear',
+        mouseWheel: true  // Enable slide navigation via mouse wheel
       });
+
+      Reveal.configure({ slideNumber: true });
+
+      // Add mouse click navigation.
+      // Source: https://www.raymondcamden.com/2012/10/20/Adding-mouse-click-navigation-to-revealjs
+      window.addEventListener("mousedown", handleClick, false);
+      window.addEventListener("contextmenu", function(e) { e.preventDefault(); }, false);
+      function handleClick(e) {
+        e.preventDefault();
+        if(e.button === 0) Reveal.next();
+        if(e.button === 2) Reveal.prev();
+      }
     </script>
   </body>
 </html>
