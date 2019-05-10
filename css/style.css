@@ -25,3 +25,11 @@
     opacity: 1;
     display: inline;
 }
+
+#opsec {
+    position:absolute;
+    height: 350px;
+    margin-left: -380px;
+    margin-top: 100px;
+    box-shadow: none;
+}
