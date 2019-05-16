@@ -1,3 +1,5 @@
+SHELL := /bin/bash
+
 # Install reveal.js server.
 revealjs/node_modules:
 	pushd revealjs; npm install
