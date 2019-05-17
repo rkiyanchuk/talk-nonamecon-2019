@@ -351,7 +351,7 @@
               у балансі стікість-швидкодія доцільно робити акцент на стійкості.
 
               Тому алгоритм базували на структурі шифру Rijndael,
-              оскільки він має найкращі математично обгрунтовані показники
+              оскільки він має математично обгрунтовані показники
               стійкості перевірені часом.
 
               Через вимогу підтримки 512-бітного блоку шифр був оптимізований
@@ -459,27 +459,27 @@
             <table>
               <tbody>
                 <tr>
-                  <td>ADE</td>
+                  <td><a href="https://www.sav.sk/journals/uploads/0317154006ogdr.pdf">ADE</a></td>
                   <td>ХНУПС ім. Кожедуба, Харків<br>
                     <small>Rijndael SPN, підвищена стійкість до алгебраїчних атак.</small></td>
                 </tr>
                 <tr>
-                  <td>Лабіринт</td>
+                  <td><a href="http://www.hups.mil.gov.ua/periodic-app/article/5592/soi_2007_4_8.pdf">Лабіринт</a></td>
                   <td>АТ «Криптомаш», Харків<br>
                     <small>Компактна реалізація, низька швидкодія.</small></td>
                 </tr>
                 <tr>
-                  <td>RSB</td>
+                  <td><a href="http://dspace.nbuv.gov.ua/bitstream/handle/123456789/6887/02-Beletskiy.pdf?sequence=1">RSB</a></td>
                   <td>НАУ, Київ<br>
                     <small>Складна структура, нестандартний мат. апарат.</small></td>
                 </tr>
                 <tr>
-                  <td>Мухомор</td>
+                  <td><a href="http://openarchive.nure.ua/bitstream/document/4808/1/221-225.pdf">Мухомор</a></td>
                   <td>ХНУРЕ, Харків<br>
                     <small>Висока швидкодія.</small></td>
                 </tr>
                 <tr>
-                  <td>Калина</td>
+                  <td><a href="https://eprint.iacr.org/2015/650.pdf">Калина</a></td>
                   <td>АТ «ІІТ», Харків<br>
                     <small>Rijndael SPN, високий запас стійкості.</small></td>
                 </tr>
@@ -645,7 +645,7 @@
               </table>
             </font>
             <aside class="notes" data-markdown>
-              Проте сам шифр, на скільки б надійним він не був, не здатен
+              сам шифр, на скільки б надійним він не був, не здатен
               забезпечити конфіденційність інформації сам по собі, бо шифр --
               це насправді лише одна складова надійної криптосистеми, самого
               шифру мало.
@@ -794,7 +794,7 @@
           </section>
 
           <section>
-            <h3>GCM, GMAC</h3>
+            <h3>GCM</h3>
             <img src="images/mode-gcm.png" width=50%>
             <font size="6">
             <ul>
@@ -966,6 +966,7 @@
         math: {mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js'},
         navigationMode: 'linear',
         mouseWheel: true,  // Enable slide navigation via mouse wheel.
+        pdfSeparateFragments: false,
         history: true  // Push each slide change to the browser history.
       });
     </script>
